@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>cgpa converter</title>
+    <script>
+        function solve() {
+            let x = document.getElementById("cgpa").value;
+            if (x >= 8.25) {
+                let result = 75 + 25 * (x - 8.25) / 1.75;
+                document.getElementById("percent").value = result;
+            }
+            else if (x >= 6.5) {
+                let result = 60 + 15 * (x - 6.5) / 1.75;
+                document.getElementById("percent").value = result;
+            }
+            else if (x >= 4.5) {
+                let result = 50 + 10 * (x - 4.5) / 2.0
+                document.getElementById("percent").value = result;
+            }
+            else {
+                alert("Enter cgpa between 4.5 and 10..!")
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('images/bgimg.jpg');
+            background-size: cover;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            border-bottom: 1px solid white;
+        }
+
+        #form {
+            width: 50%;
+            margin-left: 20%;
+            border: 2px solid white;
+            padding: 5%;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px 12px;
+            margin-left: 10%;
+            background-color: transparent;
+            border-radius: 5px;
+            border-color: white;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        label {
+            font-size: 25px;
+            color: white;
+            margin-left: 10%;
+        }
+
+        button {
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding: 10px;
+            border-radius: 25%;
+            background-color: transparent;
+            color: white;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            border-bottom: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SCSVMV</h1>
+
+    <div id="form">
+        <h4>CGPA TO PERCENTAGE</h4>
+        <label for="cgpa">CGPA :</label> <br>
+        <input type="float" id="cgpa" name="cgpa"> <br>
+        <button onclick="solve()">GO</button> <br>
+        <label for="percent">PERCENTAGE :</label> <br>
+        <input type="float" id="percent" name="percent"> <br>
+    </div>
+</body>
+
+</html>
